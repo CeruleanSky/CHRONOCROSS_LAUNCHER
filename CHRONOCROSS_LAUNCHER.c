@@ -38,9 +38,9 @@ int main( void )
     CloseHandle(pi.hProcess);
     }
 
-    // This is to wait around a second to ensure that when Chrono Cross 
-    // launches the launcher upon exit, the second copy sees this copy's mutex
-    // and exits as per the code at the beginning.
+    // Prevents infinit launching and looping by waiting a second to ensure
+    // that when Chrono Cross launches the launcher upon exit, the second copy
+    // sees this copy's mutex and exits as per the code at the beginning.
     Sleep(1000);
 
     CloseHandle(ghMutex);
